@@ -1,0 +1,24 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Current File",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "env": {
+                "CLICKUP_API_KEY": "pk_18937484_63OQWFOFGUAU8CJJMGWQ8KJSC0737QVS",
+                "CLICKUP_BASE_PATH": "https://api.clickup.com/api/v2",
+                "POSTGRES_DB": "bbrief",
+                "POSTGRES_PASSWORD": "bbrief-ig",
+                "POSTGRES_PORT": "5432",
+                "POSTGRES_SERVER": "mainclass-homolog.c0lokzmfpgku.us-west-1.rds.amazonaws.com",
+                "POSTGRES_USER": "bbrief"
+            },
+        }
+    ]
+}

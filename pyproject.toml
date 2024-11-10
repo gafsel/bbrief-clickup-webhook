@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "lambda_function"  
+version = "0.0.0"
+description = "AWS Lambda for ClickUp Webhook handling"
+authors = ["Gabriel Silva <gabriel@mainclass.com.br>"]
+packages = [
+    { include = "lambda_function.py" },
+    { include = "business/*" },
+    { include = "clickup/*" },
+    { include = "db/*" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.32.3"
+sqlalchemy = "^2.0.36"
+psycopg2-binary = "^2.9.9"
+
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry-plugin-lambda-build]
+layer-artifact-path = "artifacts/layer.zip"
+layer-install-dir = "python"
+function-artifact-path = "artifacts/function.zip"
+without = "dev"
